@@ -8,12 +8,12 @@ public class UsingPostmanEcho {
     void shouldReturnRequest() {
         given()// Предусловия
                 .baseUri("https://postman-echo.com")
-                .body("Once upon a long ago")// отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("Upon a long ago")// отправляемые данные (заголовки и query можно выставлять аналогично)
                 .when()// Выполняемые действия
                 .post("/post")
                 .then()// Проверки
                 .statusCode(200)
-                .body("data", equalTo("Once upon a long ago"))
+                .body("data", equalTo("Upon a long ago"))
         ;
     }
 }
